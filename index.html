@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perdi Achei | Central de Achados e Perdidos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero" id="inicio" aria-label="Inicio">
+        <nav class="nav">
+            <a href="#inicio" class="marca"><img src="assets/logo-perdi-achei.svg" alt="logo" class="marca-img"></a>
+            <div class="nav-links" aria-label="Navegação Principal">
+                <a href="#cadastro">Cadastrar</a>
+                <a href="#registros">Registros</a>
+            </div>
+        </nav>
+        <section class="hero-conteudo">
+            <div class="hero-texto">
+                <h1>Perdeu? Achou? Registre aqui</h1>
+                <p>Uma central simples para cadastrar objetos perdidos ou encontrados na Unipar </p>
+                <div class="acao">
+                    <a href="#cadastro" class="btn-principal">Cadastrar objeto</a>
+                    <a href="#registros" class="btn-principal">Ver registros</a>
+                </div>
+            </div>
+            <aside class="hero-card" aria-label="Resumo do sistema">
+                <img src="assets/hero-achados-perdidos.svg" alt="Ilustração de objetos">
+                <div class="hero-metricas">
+                    <div>
+                        <strong id="totalRegistros">0</strong>
+                        <span>Registros</span>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </header>
+    <main class="container">
+        <section class="grid-principal">
+            <article class="card" id="cadastro">
+                <div class="card-cabecalho">
+                    <img src="assets/formulario.svg">
+                    <div>
+                        <h2>Cadastrar objeto</h2>
+                        <p>Informe os dados do objeto</p>
+                    </div>
+                </div>
+                <form action="" id="formObjeto" autocomplete="off">
+                    <label>Nome do objeto</label>
+                    <input type="text" name="objeto" maxlength="80" placeholder="Ex.: Mochila, chave, carteira"
+                        required>
+                    <div class="coluna-dois">
+                        <label>Tipo</label>
+                        <select name="tipo" required>
+                            <option value="">Selecione</option>
+                            <option value="perdido">Perdido</option>
+                            <option value="encontrado">Encontrado</option>
+                        </select>
+                        <label>Data</label>
+                        <input type="date" name="data" required>
+                    </div>
+                    <label>Local</label>
+                    <input type="text" name="local" maxlength="100" placeholder="Ex.: Laboratório 2, Biblioteca, Pátio" required>
+                    <label>Descrição</label>
+                    <textarea name="descricao" maxlength="360" placeholder="Descreva cor, marca, detalhes..." required></textarea>
+                    <label>Contato</label>
+                    <input type="text" name="contato" maxlength="100" placeholder="E-mail, WhatsApp..." required>
+
+                    <button type="submit" class="btn btn-form">Salvar</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
