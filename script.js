@@ -59,3 +59,16 @@ function renderizarRegistros() {
         listaRegistros.appendChild(div)
     })
 }
+async function carregarRegistro() {
+    try {
+        const resposta = await fetch("listar.php", {
+            cache: "no-store"
+        })
+        if (!resposta.ok) {
+            throw new Error("erro ao carregar")
+        }
+        const dados = await fetch("listar.php")
+    } catch (error) {
+
+    }
+}
